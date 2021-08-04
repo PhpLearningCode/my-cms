@@ -1,1 +1,5 @@
-essa e a pagina de portfolio
+@extends('layouts.site')
+
+@section('content')
+esta e a pagina de  portfolio
+@endsection
