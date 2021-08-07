@@ -10,9 +10,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('contact') }}">Contato</a></li>
+                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
 
             </ul>
         </nav>
@@ -20,4 +20,7 @@
     <body>
         @yield('content')
     </body>
+    <footer>
+        <p>Criado por William Souza</p>
+    </footer>
 </html>

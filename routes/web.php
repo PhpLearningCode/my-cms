@@ -17,6 +17,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', HomeController::class);
-Route::get('/contato', [ContactController::class, 'index']);
-Route::get('/portfolio', [PortfolioController::class, 'index']);
+Route::get('/', HomeController::class)->name('home');
+Route::get('/contato', [ContactController::class, 'index'])->name('contact');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');

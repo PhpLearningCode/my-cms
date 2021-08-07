@@ -1,3 +1,48 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+/* VARIABLES */
+/* GENERAL */
 body {
-  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+body ul li {
+  list-style: none;
+}
+body a, body a:visited, body a:hover {
+  text-decoration: none;
+  color: #28203e;
+  font-weight: bold;
+}
+
+/* HEADER */
+header {
+  padding: 20px 0 10px 0;
+  display: flex;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 999;
+}
+header ul li {
+  display: inline;
+  margin-right: 10px;
+}
+header a, header a:visited {
+  color: #28203e;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+header a:hover {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 2px solid #8257e5;
+}
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding-left: 5px;
+  border-top: 1px solid #28203e;
+  width: 100%;
 }

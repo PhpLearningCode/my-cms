@@ -1,3 +1,72 @@
-body {
-    background-color: black;
-}
+
+/* VARIABLES */
+
+ $color_primary: #FFF;
+ $color_secondary: #000;
+ $color_primary_dark: #1E90FF;
+ $color_secondary_dark: #28203e; 
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ 
+ 
+ /* GENERAL */
+ 
+ body {
+     font-family: 'Roboto',sans-serif;
+     ul {
+         li {
+             list-style: none;
+         }
+     }
+         
+ 
+     a, a:visited, a:hover {
+         text-decoration: none;
+         color: $color_secondary_dark;
+         font-weight: bold;
+     }
+         
+ }
+     
+ 
+ /* HEADER */
+ 
+ header {
+     padding: 20px 0 10px 0;
+     display: flex;
+     border-bottom: 1px solid $color_secondary;
+     text-align: center;
+     justify-content: center;
+     width: 100%;
+     z-index: 999;
+ 
+     ul li {
+         display: inline;
+         margin-right: 10px;
+     }
+ 
+     a, a:visited {
+         color: $color_secondary_dark;
+         transition: all .2s ease;
+         border-bottom: 2px solid transparent;
+     }
+ 
+     a:hover {
+         text-decoration: none;
+         color: $color_secondary;
+         border-bottom: 2px solid #8257e5;
+     }
+ 
+ }
+ 
+ 
+     
+ 
+ /* FOOTER */
+ footer {
+     position: absolute;
+     bottom: 0px;
+     padding-left: 5px;
+     border-top: 1px solid $color_secondary_dark;
+     width: 100%;
+ }
