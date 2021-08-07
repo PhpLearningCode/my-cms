@@ -1,8 +1,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
 /* VARIABLES */
 /* GENERAL */
+html {
+  width: 99.5%;
+  height: 100%;
+  margin: -5px 0 0 -5px;
+}
+
 body {
+  width: 100%;
+  height: 90%;
   font-family: "Roboto", sans-serif;
+  color: #FFF;
 }
 body ul li {
   list-style: none;
@@ -16,12 +25,14 @@ body a, body a:visited, body a:hover {
 /* HEADER */
 header {
   padding: 20px 0 10px 0;
+  margin: -5px 0 -5px 0;
   display: flex;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #FFF;
   text-align: center;
   justify-content: center;
   width: 100%;
   z-index: 999;
+  background-color: #000;
 }
 header ul li {
   display: inline;
@@ -34,7 +45,7 @@ header a, header a:visited {
 }
 header a:hover {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
   border-bottom: 2px solid #8257e5;
 }
 
@@ -44,5 +55,23 @@ footer {
   bottom: 0px;
   padding-left: 5px;
   border-top: 1px solid #28203e;
-  width: 100%;
+  width: 99%;
+  background-color: #000;
+}
+
+/* HOME */
+.banner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url(/images/bg.jpg?1e6660160d74059a9764407e0f12b282);
+}
+.banner .title {
+  font-size: 48pt;
+}
+.banner p {
+  font-size: 32pt;
 }

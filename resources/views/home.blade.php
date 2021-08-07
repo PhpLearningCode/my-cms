@@ -1,5 +1,8 @@
 @extends('layouts.site')
 
 @section('content')
-esta e a pagina de  home
+<div class="banner">
+    <p class="title">William Souza</p>
+    <p>Desenvolvedor Fullstack</p>
+</div>
 @endsection
