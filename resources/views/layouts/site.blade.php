@@ -21,6 +21,6 @@
         @yield('content')
     </body>
     <footer>
-        <p>Criado por William Souza</p>
+        <p>&nbsp;</p>
     </footer>
 </html>
