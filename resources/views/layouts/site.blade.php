@@ -11,8 +11,8 @@
         <nav>
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('contact') }}">Contato</a></li>
                 <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ route('contact') }}">Contato</a></li>
 
             </ul>
         </nav>
