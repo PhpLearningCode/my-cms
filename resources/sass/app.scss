@@ -12,12 +12,14 @@
  /* GENERAL */
 
  html {
+     scroll-behavior: smooth;
      width: 99.5%;
      height: 100%;
      margin: -5px 0 0 -5px;
  }
 
  body {
+     margin-top: 40px;
      width: 100%;
      height: 86%;
      font-family: 'Roboto',sans-serif;
@@ -43,6 +45,8 @@
 
  header {
      padding: 20px 0 10px 0;
+     position: fixed;
+     top: 0;
      margin: -5px 0 0 0;
      display: flex;
      border-bottom: 1px solid $color_secondary_dark;
@@ -107,5 +111,35 @@
      p {
         font-size: 26pt;
      }
+ }
+
+ .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+ }
+
+
+ .profile-title {
+     margin-top: 160px;
+     font-size: 21pt;
+     justify-self: center;
+ }
+
+ .profile-subsec {
+     display: flex;
+ }
+
+ .profile-pic {
+     height: 302px;
+     width: 302px;
+     border-radius: 151px;
+     margin-right: 32px;
+ }
+
+ .profile-description {
+     width: 420px;
  }
 
