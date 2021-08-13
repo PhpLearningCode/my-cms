@@ -143,3 +143,61 @@
      width: 420px;
  }
 
+ /* CONTACT */
+
+ .contact {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+ }
+
+ .message {
+
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+
+     p {
+         font-size: 16pt;
+         margin-bottom: 30px;
+     }
+
+     input {
+         margin: 5px 0 20px 0;
+         width: 90%;
+     }
+
+     #mensagem {
+         width:90%;
+         height: 80px;
+     }
+
+     button {
+         margin: 15px 0 30px 20px;
+     }
+ }
+
+ .contact-form {
+    border: 1px solid $color_secondary;
+    box-shadow: $color_secondary_dark;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+ .links {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin-top: 30px;
+
+     .link-item {
+         display: flex;
+         margin-bottom: 25px;
+
+         img {
+             margin-right: 20px;
+         }
+     }
+ }

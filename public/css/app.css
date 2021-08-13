@@ -115,3 +115,54 @@ footer {
 .profile-description {
   width: 420px;
 }
+
+/* CONTACT */
+.contact {
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.message p {
+  font-size: 16pt;
+  margin-bottom: 30px;
+}
+.message input {
+  margin: 5px 0 20px 0;
+  width: 90%;
+}
+.message #mensagem {
+  width: 90%;
+  height: 80px;
+}
+.message button {
+  margin: 15px 0 30px 20px;
+}
+
+.contact-form {
+  border: 1px solid #FFF;
+  box-shadow: #4c4b4e;
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+.links .link-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+.links .link-item img {
+  margin-right: 20px;
+}
