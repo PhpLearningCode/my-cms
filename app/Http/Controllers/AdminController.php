@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');
+        return view('admin');
     }
 
     /**
@@ -80,10 +80,5 @@ class ContactController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function form(Request $request)
-    {
-        ddd($request->all());
     }
 }

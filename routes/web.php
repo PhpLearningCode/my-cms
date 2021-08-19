@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -19,4 +20,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/contato', [ContactController::class, 'index'])->name('contact');
+Route::post('/email', [ContactController::class, 'form'])->name('email');
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+
+Route::get('/admin', [AdminController::class, 'index'])->name('login');
+

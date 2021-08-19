@@ -4,7 +4,8 @@
 <section class="contact">
     <div class="message">
         <p>Envie sua mensagem, entre em contato!!!</p>
-        <form class="contact-form" action="post">
+        <form class="contact-form" action="{{route('email')}}" method="post">
+            @csrf
             <div class="field">
                 <label for="nome">Nome</label><br>
                 <input type="text" id="nome" />
