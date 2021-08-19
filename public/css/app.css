@@ -166,3 +166,34 @@ footer {
 .links .link-item img {
   margin-right: 20px;
 }
+
+/* ADMIN LOGIN */
+.login-box {
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #FFF;
+  width: 250px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.login-box input {
+  margin-bottom: 10px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.login-box label {
+  margin-left: 40px;
+}
+.login-box button {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+.login-box p {
+  margin-left: 16px;
+  font-size: 14pt;
+  text-decoration: underline;
+}
