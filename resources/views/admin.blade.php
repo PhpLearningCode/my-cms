@@ -9,13 +9,22 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="{{route('login')}}" method="post">
+        @if(session('msg'))
+        <div class="alert alert-danger alert-dismissible" style="width:100% !important">
+            <button type=" button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h5><i class=" msg icon fas fa-ban"></i> Atenção!</h5>
+            {{ session('msg') }}
+        </div>
+        <div class="msg bg-danger " style="color:seashell"><span></span></div>
+        @endif
+
+        <form action="{{route('login')}}" method="POST">
             @csrf
             <p class="login-title">William Souza - backend</p>
             <label for="email">E-mail</label>
-            <input type="email" />
+            <input type="email" name="email" />
             <label for="password">Senha</label>
-            <input type="password" />
+            <input type="password" name="password" />
             <button type="submit">Entrar</button>
         </form>
     </div>

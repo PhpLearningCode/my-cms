@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
+
 class AdminController extends Controller
 {
     /**
@@ -84,6 +87,22 @@ class AdminController extends Controller
 
     public function login(Request $request)
     {
-        ddd($request->all());
+        if ( Auth::check() ) {
+            return redirect()->intended('home');
+        }
+
+        $request->validate([
+            'email' => 'required|email|max:255',
+            'password' => 'required'
+        ]);
+
+        $credentials = ['email' => $request->email, 'password' => $request->password];
+
+        if (Auth::attempt($credentials)) {
+
+            return redirect()->intended('home');
+        } else {
+            return redirect()->back()->with("msg", "Acesso negado para estas credenciais");
+        }
     }
 }
