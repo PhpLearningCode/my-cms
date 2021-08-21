@@ -10,12 +10,9 @@
 <body>
     <div class="login-box">
         @if(session('msg'))
-        <div class="alert alert-danger alert-dismissible" style="width:100% !important">
-            <button type=" button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h5><i class=" msg icon fas fa-ban"></i> Atenção!</h5>
-            {{ session('msg') }}
-        </div>
-        <div class="msg bg-danger " style="color:seashell"><span></span></div>
+        <script>
+            alert("{{ session('msg') }}");
+        </script>
         @endif
 
         <form action="{{route('login')}}" method="POST">

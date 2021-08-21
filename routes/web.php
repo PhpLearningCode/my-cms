@@ -23,7 +23,12 @@ Route::get('/contato', [ContactController::class, 'index'])->name('contact');
 Route::post('/email', [ContactController::class, 'form'])->name('email');
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::post('/login', [AdminController::class, 'login'])->name('login');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin-home', [AdminController::class, 'home'])->name('admin-home');
+
+});
 
 

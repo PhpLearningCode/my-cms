@@ -100,9 +100,14 @@ class AdminController extends Controller
 
         if (Auth::attempt($credentials)) {
 
-            return redirect()->intended('home');
+            return redirect()->intended('admin-home');
         } else {
             return redirect()->back()->with("msg", "Acesso negado para estas credenciais");
         }
+    }
+
+    public function home()
+    {
+        return view('admin-home');
     }
 }
