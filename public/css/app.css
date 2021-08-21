@@ -21,8 +21,12 @@ body ul li {
 }
 body a, body a:visited, body a:hover {
   text-decoration: none;
+  transition: all 0.2s ease;
   color: #4c4b4e;
   font-weight: bold;
+}
+body a:hover {
+  color: #FFF;
 }
 
 /* HEADER */
@@ -196,4 +200,13 @@ footer {
   margin-left: 16px;
   font-size: 14pt;
   text-decoration: underline;
+}
+
+/* ADMIN HOME */
+.admin-home a {
+  margin-left: 40px;
+}
+
+.post-title {
+  display: inline;
 }
