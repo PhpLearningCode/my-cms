@@ -7,6 +7,7 @@
         <li>
             <div class="post-title">
                 <h2>API Endereços e Alunos</h2>
+                <div class="category">Web</div>
             </div>
             <br />
             <img src="{{asset('images/dummy.jpg')}}" alt="image">
@@ -19,6 +20,7 @@ Como framework para estrutura da API foi utilizado o NestJS, utilizado para cons
         <li>
             <div class="post-title">
                 <h2>API Endereços e Alunos</h2>
+                <div class="category">Web</div>
             </div>
             <br />
             <img src="{{asset('images/dummy.jpg')}}" alt="image">
@@ -31,6 +33,7 @@ Como framework para estrutura da API foi utilizado o NestJS, utilizado para cons
         <li>
             <div class="post-title">
                 <h2>API Endereços e Alunos</h2>
+                <div class="category">Web</div>
             </div>
             <br />
             <img src="{{asset('images/dummy.jpg')}}" alt="image">
@@ -43,6 +46,7 @@ Como framework para estrutura da API foi utilizado o NestJS, utilizado para cons
         <li>
             <div class="post-title">
                 <h2>API Endereços e Alunos</h2>
+                <div class="category">Web</div>
             </div>
             <br />
             <img src="{{asset('images/dummy.jpg')}}" alt="image">

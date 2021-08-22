@@ -261,6 +261,17 @@
      padding-right: 25px;
 
      .post-list {
+         margin-top: -30px;
+
+         .post-title {
+            .category {
+                border: 1px solid $color_secondary;
+                border-radius: 15px;
+                width: 100px;
+                text-align: center;
+            }
+         }
+
          li {
              p {
                  text-align: justify;
@@ -268,7 +279,6 @@
              }
 
              img {
-                 margin-top: -30px;
                  width: 100%;
                  height: 200px;
              }

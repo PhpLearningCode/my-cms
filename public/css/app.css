@@ -215,12 +215,20 @@ footer {
   align-items: center;
   padding-right: 25px;
 }
+.portfolio .post-list {
+  margin-top: -30px;
+}
+.portfolio .post-list .post-title .category {
+  border: 1px solid #FFF;
+  border-radius: 15px;
+  width: 100px;
+  text-align: center;
+}
 .portfolio .post-list li p {
   text-align: justify;
   margin-bottom: 60px;
 }
 .portfolio .post-list li img {
-  margin-top: -30px;
   width: 100%;
   height: 200px;
 }
