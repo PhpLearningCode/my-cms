@@ -101,6 +101,7 @@ footer {
 
 .profile-title {
   margin-top: 160px;
+  margin-left: 50px;
   font-size: 21pt;
   justify-self: center;
 }
@@ -118,6 +119,7 @@ footer {
 
 .profile-description {
   width: 420px;
+  text-align: justify;
 }
 
 /* CONTACT */
