@@ -1,8 +1,9 @@
 @extends('layouts.site')
 
 @section('content')
-<h1 class="portfolio-title">Portfolio</h1>
-<ul class="post-list">
+<div class="portfolio">
+    <h1 class="portfolio-title">Portfolio</h1>
+    <ul class="post-list">
         <li>
             <div class="post-title">
                 <h2>Titulo</h2>
@@ -15,4 +16,5 @@ Como framework para estrutura da API foi utilizado o NestJS, utilizado para cons
             <p>Github: <a href="#">LINK</a></p>
         </li>
     </ul>
+</div>
 @endsection

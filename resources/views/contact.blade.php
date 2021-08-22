@@ -23,24 +23,24 @@
     </div>
     <div class="links">
         <div class="link-item">
-            <img src="#" alt="zap" />
+            <img src="{{asset('images/whatsapp.png')}}" alt="zap" />
             <p>+55 21 981008743</p>
         </div>
         <div class="link-item">
-            <img src="#" alt="end" />
+            <img src="{{asset('images/home.png')}}" alt="end" />
             <p>Rodovia Amaral Peixoto, km 80</p>
         </div>
         <div class="link-item">
-            <img src="#" alt="email" />
+            <img src="{{asset('images/gmail.png')}}" alt="email" />
             <p>williamguilhermesouza@gmail.com</p>
         </div>
         <div class="link-item">
-            <img src="#" alt="github" />
-            <p>https://github.com/williamguilhermesouza</p>
+            <img src="{{asset('images/github.png')}}" alt="github" />
+            <a href="https://github.com/williamguilhermesouza">https://github.com/williamguilhermesouza</a>
         </div>
         <div class="link-item">
-            <img src="#" alt="linkedin" />
-            <p>https://www.linkedin.com/in/william-guilherme-45540a171</p>
+            <img src="{{asset('images/linkedin.png')}}" alt="linkedin" />
+            <a href="https://www.linkedin.com/in/william-guilherme-45540a171">https://www.linkedin.com/in/william-guilherme-45540a171</a>
         </div>
     </div>
 </section>

@@ -169,6 +169,11 @@ footer {
 }
 .links .link-item img {
   margin-right: 20px;
+  width: 42px;
+  height: 42px;
+}
+.links .link-item a, .links .link-item p {
+  margin-top: 10px;
 }
 
 /* ADMIN LOGIN */
