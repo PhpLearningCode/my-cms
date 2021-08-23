@@ -7,13 +7,15 @@
         <label for="title">Título</label>
         <input type="text" name="title" id="title">
 
-        <p>Categoria:</p>
-        <input type="radio" name="category" id="web" value="Web">
-        <label for="web">Web</label>
-        <input type="radio" name="category" id="mobile" value="Mobile">
-        <label for="web">Mobile</label>
-        <input type="radio" name="category" id="desktop" value="desktop">
-        <label for="desktop">Desktop</label>
+        <div class="category">
+            <p>Categoria:</p>
+            <input type="radio" name="category" id="web" value="Web">
+            <label for="web">Web</label>
+            <input type="radio" name="category" id="mobile" value="Mobile">
+            <label for="web">Mobile</label>
+            <input type="radio" name="category" id="desktop" value="desktop">
+            <label for="desktop">Desktop</label>
+        </div>
 
         <label for="github">Github</label>
         <input type="text" name="github" id="github">
@@ -24,8 +26,11 @@
         <label for="description">Descrição</label>
         <textarea name="description" id="description" cols="30" rows="10"></textarea>
 
-        <button type="submit">Salvar</button>
-        <button type="reset">Limpar</button>
+        <div class="buttons">
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+        </div>
+
     </form>
 </div>
 @endsection

@@ -267,3 +267,33 @@ footer {
   width: 100%;
   height: 200px;
 }
+
+/* ADMIN-NEW */
+.admin-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+  width: 80%;
+}
+.admin-new form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 10px 0 10px;
+}
+.admin-new form .category {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+.admin-new form .category label {
+  margin-top: 10px;
+}
+.admin-new form input {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.admin-new form textarea {
+  margin-bottom: 20px;
+}
