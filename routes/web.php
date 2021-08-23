@@ -28,6 +28,8 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-home', [AdminController::class, 'home'])->name('admin-home');
+    Route::get('/admin-new', [AdminController::class, 'new'])->name('admin-new');
+
 
 });
 

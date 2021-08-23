@@ -110,4 +110,9 @@ class AdminController extends Controller
     {
         return view('admin-home');
     }
+
+    public function new()
+    {
+        return view('admin-new');
+    }
 }
