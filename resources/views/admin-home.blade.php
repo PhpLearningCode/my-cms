@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="admin-home">
-    <a href="#" id="new-post">Novo Item</a>
+    <a href="{{route('admin-new')}}" id="new-post">Novo Item</a>
     <ul class="post-list">
         <li>
             <div class="post-title">
