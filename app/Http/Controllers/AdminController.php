@@ -115,4 +115,9 @@ class AdminController extends Controller
     {
         return view('admin-new');
     }
+
+    public function newPost(Request $request)
+    {
+        return ddd($request->all());
+    }
 }

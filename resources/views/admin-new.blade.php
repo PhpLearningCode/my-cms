@@ -3,7 +3,8 @@
 @section('content')
 <div class="admin-new">
     <h2 class="title">Novo Item</h2>
-    <form action="#" method="post">
+    <form action="{{route('new-post')}}" method="post">
+        @csrf
         <label for="title">Título</label>
         <input type="text" name="title" id="title">
 
