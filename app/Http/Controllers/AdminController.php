@@ -124,10 +124,21 @@ class AdminController extends Controller
     public function newPost(Request $request)
     {
 
-        Storage::disk('public')->put($request->img, 'Contents');
+        $request->validate([
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $extension = $request->img->extension();
+        $request->image->storeAs('/public', $request->img.".".$extension);
+                $url = Storage::url($request->img.".".$extension);
+                $file = File::create([
+                   'name' => $validated['img'],
+                    'url' => $url,
+                ]);
+
 
         $image_path = asset("/storage/$request->img");
-        DB::insert("insert into posts (title,category,image,description,github) values('$request->title', '$request->category', '$image_path', '$request->description', '$request->github')");
+        DB::insert("insert into posts (title,category,image,description,github) values('$request->title', '$request->category', '$url', '$request->description', '$request->github')");
         
         redirect()->back()->with("msg", "Salvo com sucesso");
 
