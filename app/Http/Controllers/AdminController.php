@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Storage;
+
+use Illuminate\Support\Facades\DB;
+
 
 class AdminController extends Controller
 {
@@ -118,6 +122,12 @@ class AdminController extends Controller
 
     public function newPost(Request $request)
     {
-        return ddd($request->all());
+
+        Storage::disk('local')->put($request->img, 'Contents');
+
+        $image_path = asset("storage/$request->img");
+        DB::insert("insert into posts (title,category,image,description,github) values('$request->title', '$request->category', '$image_path', '$request->description', '$request->github')");
+        
+        return redirect()->back()->with("msg", "Salvo com sucesso");
     }
 }
