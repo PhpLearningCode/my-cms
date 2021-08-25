@@ -92,7 +92,7 @@ class AdminController extends Controller
     public function login(Request $request)
     {
         if ( Auth::check() ) {
-            return redirect()->intended('home');
+            return redirect()->intended('admin-home');
         }
 
         $request->validate([
@@ -112,7 +112,8 @@ class AdminController extends Controller
 
     public function home()
     {
-        return view('admin-home');
+        $posts = DB::select('select * from posts');
+        return view('admin-home', ['posts' => $posts]);
     }
 
     public function new()
@@ -123,11 +124,14 @@ class AdminController extends Controller
     public function newPost(Request $request)
     {
 
-        Storage::disk('local')->put($request->img, 'Contents');
+        Storage::disk('public')->put($request->img, 'Contents');
 
-        $image_path = asset("storage/$request->img");
+        $image_path = asset("/storage/$request->img");
         DB::insert("insert into posts (title,category,image,description,github) values('$request->title', '$request->category', '$image_path', '$request->description', '$request->github')");
         
-        return redirect()->back()->with("msg", "Salvo com sucesso");
+        redirect()->back()->with("msg", "Salvo com sucesso");
+
+        $posts = DB::select('select * from posts');
+        return view('admin-home', ['posts' => $posts]);
     }
 }
