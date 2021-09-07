@@ -294,6 +294,9 @@ footer {
   width: 80%;
   margin-bottom: 10px;
 }
+.admin-new form #salvar {
+  width: 100px;
+}
 .admin-new form textarea {
   margin-bottom: 20px;
 }

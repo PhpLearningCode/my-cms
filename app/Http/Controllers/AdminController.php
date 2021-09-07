@@ -129,17 +129,14 @@ class AdminController extends Controller
         ]);
 
         $extension = $request->img->extension();
-        $request->image->storeAs('/public', $request->img.".".$extension);
-                $url = Storage::url($request->img.".".$extension);
-                $file = File::create([
-                   'name' => $validated['img'],
-                    'url' => $url,
-                ]);
+        $url = $request->file('img')->storeAs('/public', $request->img.".".$extension);
+
+
 
 
         $image_path = asset("/storage/$request->img");
         DB::insert("insert into posts (title,category,image,description,github) values('$request->title', '$request->category', '$url', '$request->description', '$request->github')");
-        
+
         redirect()->back()->with("msg", "Salvo com sucesso");
 
         $posts = DB::select('select * from posts');

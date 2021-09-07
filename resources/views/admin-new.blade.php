@@ -8,7 +8,7 @@
     </script>
     @endif
     <h2 class="title">Novo Item</h2>
-    <form action="{{route('new-post')}}" method="post">
+    <form action="{{route('new-post')}}" method="post" enctype="multipart/form-data">
         @csrf
         <label for="title">Título</label>
         <input type="text" name="title" id="title">
@@ -33,7 +33,7 @@
         <textarea name="description" id="description" cols="30" rows="10"></textarea>
 
         <div class="buttons">
-            <button type="submit">Salvar</button>
+            <input type="submit" value="Salvar" id="salvar" name="submit">
             <button type="reset">Limpar</button>
         </div>
 
