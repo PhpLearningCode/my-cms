@@ -5,13 +5,13 @@
 
 
     <h2 class="title">Novo Item</h2>
-    <form action="
+    <form
         @if($post)
-        {{route('update-post')}}
+        action="{{route('update-post')}}"
         @else
-        {{route('new-post')}}
+        action="{{route('new-post')}}"
         @endif
-        " method="post" enctype="multipart/form-data">
+    method="post" enctype="multipart/form-data">
         @csrf
         <label for="title">Título</label>
         <input type="text" name="title" id="title"
