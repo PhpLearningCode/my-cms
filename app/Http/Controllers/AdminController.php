@@ -140,4 +140,10 @@ class AdminController extends Controller
         $posts = DB::select('select * from posts');
         return view('admin-home', ['posts' => $posts]);
     }
+
+    public function deletePost($id)
+    {
+        DB::delete("delete from posts where id=$id");
+        redirect()->back()->with("msg", "Deletado com sucesso");
+    }
 }

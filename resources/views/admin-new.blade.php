@@ -2,11 +2,7 @@
 
 @section('content')
 <div class="admin-new">
-    @if(session('msg'))
-    <script>
-        alert("{{ session('msg') }}");
-    </script>
-    @endif
+
     <h2 class="title">Novo Item</h2>
     <form action="{{route('new-post')}}" method="post" enctype="multipart/form-data">
         @csrf

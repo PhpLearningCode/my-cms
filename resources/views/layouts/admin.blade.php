@@ -8,6 +8,11 @@
     <title>William Souza - Admin</title>
 </head>
 <body>
+    @if(session('msg'))
+    <script>
+        alert("{{ session('msg') }}");
+    </script>
+    @endif
     @yield('content')
 </body>
 </html>

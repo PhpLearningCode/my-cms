@@ -11,8 +11,8 @@
                 <h2>{{$post->title}}</h2>
                 <div class="sub-title">
                     <div class="category">{{$post->category}}</div>
-                    <button ><img src="{{asset('images/edit.png')}}" alt="edit"></button>
-                    <button ><img src="{{asset('images/delete.png')}}" alt="excluir"></button>
+                    <button ><a href="{{route('update-post', ['post' => $post])}}"><img src="{{asset('images/edit.png')}}" alt="edit"></a></button>
+                    <button ><a href="{{route('delete-post', ['id' => $post->id])}}"><img src="{{asset('images/delete.png')}}" alt="excluir"></a></button>
                 </div>
             </div>
             <br />
@@ -21,7 +21,7 @@
             <p>Github: <a href="{{$post->github}}">{{$post->github}}</a></p>
         </li>
         @endforeach
-        
+
 
         <li>
             <div class="post-title">
