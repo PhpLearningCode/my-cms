@@ -28,10 +28,10 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-home', [AdminController::class, 'home'])->name('admin-home');
-    Route::get('/admin-new', [AdminController::class, 'new'])->name('admin-new');
+    Route::get('/admin-new/{id?}', [AdminController::class, 'new'])->name('admin-new');
     Route::post('/new-post', [AdminController::class, 'newPost'])->name('new-post');
     Route::get('/delete-post/{id}', [AdminController::class, 'deletePost'])->name('delete-post');
-    Route::get('/update-post/{post}', [AdminController::class, 'updatePost'])->name('update-post');
+    Route::post('/update-post', [AdminController::class, 'updatePost'])->name('update-post');
 
 
 });
