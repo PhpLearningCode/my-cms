@@ -150,7 +150,7 @@ class AdminController extends Controller
     public function deletePost($id)
     {
         DB::delete("delete from posts where id=$id");
-        redirect()->back()->with("msg", "Deletado com sucesso");
+        return redirect()->back()->with("msg", "Deletado com sucesso");
     }
 
     public function updatePost(Request $request)
@@ -164,13 +164,10 @@ class AdminController extends Controller
 
         $image_path = asset('/storage' . '/' . $request->img->getClientOriginalName());
 
-        ddd($request->all());
         DB::update("update posts set title='$request->title', category='$request->category', image = '$image_path', description = '$request->description', github = '$request->github' where id='$request->id'");
 
-        redirect()->back()->with("msg", "Atualizado com sucesso");
 
         $posts = DB::select('select * from posts');
-        return view('admin-home', ['posts' => $posts]);
-
+        return view('admin-home', ['posts' => $posts])->with('msg', 'Atualizado com sucesso');
     }
 }

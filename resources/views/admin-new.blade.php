@@ -6,7 +6,7 @@
 
     <h2 class="title">Novo Item</h2>
     <form
-        @if($post)
+        @if($post[0])
         action="{{route('update-post')}}"
         @else
         action="{{route('new-post')}}"
