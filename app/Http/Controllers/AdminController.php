@@ -168,6 +168,6 @@ class AdminController extends Controller
 
 
         $posts = DB::select('select * from posts');
-        return view('admin-home', ['posts' => $posts])->with('msg', 'Atualizado com sucesso');
+        return route('admin-home', ['posts' => $posts, 'msg' => 'Atualizado com sucesso']);
     }
 }
